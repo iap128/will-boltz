@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Button, Layout, theme } from 'antd';
+import Home from './pages/Home';
+import NavMenu from './components/NavMenu';
+import { openURL } from './helpers/Helpers';
 import './App.css';
 
+const { Header, Footer, Content } = Layout;
+
 function App() {
+  const {
+    token: { colorBgContainer },
+  } = theme.useToken();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout className='layout'>
+      <Header style={{
+        background: colorBgContainer
+      }}>
+        <NavMenu />
+      </Header>
+
+      <Content style={{padding: '0 50px'}}>
+        <div className='site-layout-content' style={{background: colorBgContainer}}>
+          <Home />
+        </div>
+      </Content>
+
+      <Footer style={{textAlign: 'center'}}>
+        Created by <Button type='dashed' onClick={() => openURL('https://n818pe.com')}>Ryan Hunter</Button>
+      </Footer>
+    </Layout>
   );
 }
 
