@@ -1,3 +1,3 @@
 export const openURL = (url: string) => {
-    window.open(url);
-  };
+  window.open(url);
+};

@@ -12,21 +12,26 @@ function App() {
   } = theme.useToken();
 
   return (
-    <Layout className='layout'>
-      <Header style={{
-        background: colorBgContainer
-      }}>
+    <Layout className="layout">
+      <Header
+        style={{
+          background: colorBgContainer,
+        }}
+      >
         <NavMenu />
       </Header>
 
-      <Content style={{padding: '0 50px'}}>
-        <div className='site-layout-content' style={{background: colorBgContainer}}>
+      <Content style={{ padding: '0 50px' }}>
+        <div className="site-layout-content" style={{ background: colorBgContainer }}>
           <Home />
         </div>
       </Content>
 
-      <Footer style={{textAlign: 'center'}}>
-        Created by <Button type='dashed' onClick={() => openURL('https://n818pe.com')}>Ryan Hunter</Button>
+      <Footer style={{ textAlign: 'center' }}>
+        Created by{' '}
+        <Button type="dashed" onClick={() => openURL('https://n818pe.com')}>
+          Ryan Hunter
+        </Button>
       </Footer>
     </Layout>
   );

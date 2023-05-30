@@ -1,49 +1,59 @@
-import { Button, Col, Divider, FloatButton, Modal, Row, Typography } from "antd";
-import { useState } from "react";
-import BookingPage from "../components/BookingPage";
-import About from "./About";
-import Contact from "./Contact";
-import { CalendarOutlined } from "@ant-design/icons";
+import { Button, Col, Divider, FloatButton, Modal, Row, Typography } from 'antd';
+import { useState } from 'react';
+import BookingPage from '../components/BookingPage';
+import About from './About';
+import Contact from './Contact';
+import { CalendarOutlined } from '@ant-design/icons';
 
 const Home = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const closeModal = () => setIsModalOpen(false);
-    
-    return (
-        <>
-        <Typography.Title>Will Boltz - DPE</Typography.Title>
-        
+  const closeModal = () => setIsModalOpen(false);
 
-        <Modal width='75%' open={isModalOpen} onOk={closeModal} onCancel={closeModal}>
-            <BookingPage />
-        </Modal>
+  return (
+    <>
+      <Typography.Title>Will Boltz - DPE</Typography.Title>
 
-        <Row gutter={16}>
-            <Col span={8}>
-                <div id="about">
-                    <About />
-                </div>
-            </Col>
+      <Modal width="75%" open={isModalOpen} onOk={closeModal} onCancel={closeModal}>
+        <BookingPage />
+      </Modal>
 
-            <Col span={16}>
-            <Button type="primary" block size='large' shape='round' icon={<CalendarOutlined />} onClick={() => setIsModalOpen(true)}>Book Now</Button>
-            </Col>
+      <Row gutter={16}>
+        <Col span={8}>
+          <div id="about">
+            <About />
+          </div>
+        </Col>
 
-        </Row>
+        <Col span={16}>
+          <Button
+            type="primary"
+            block
+            size="large"
+            shape="round"
+            icon={<CalendarOutlined />}
+            onClick={() => setIsModalOpen(true)}
+          >
+            Book Now
+          </Button>
+        </Col>
+      </Row>
 
-        <Divider />
+      <Divider />
 
-        <div id="contact" style={{
-            display: 'flex',
-            justifyContent: 'center',
-        }}>
+      <div
+        id="contact"
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
         <Contact />
-        </div>
-        
-        <FloatButton.BackTop visibilityHeight={10}/>
-        </>
-    )
+      </div>
+
+      <FloatButton.BackTop visibilityHeight={10} />
+    </>
+  );
 };
 
 export default Home;
