@@ -21,7 +21,7 @@ function App() {
         <NavMenu />
       </Header>
 
-      <Content style={{ padding: '0 50px' }}>
+      <Content style={{ padding: '0 25px' }}>
         <div className="site-layout-content" style={{ background: colorBgContainer }}>
           <Home />
         </div>
