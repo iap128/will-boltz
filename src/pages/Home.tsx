@@ -1,22 +1,12 @@
-import { Button, Col, Divider, FloatButton, Modal, Row, Typography } from 'antd';
-import { useState } from 'react';
-import BookingPage from '../components/BookingPage';
+import { Col, Divider, FloatButton, Row, Typography } from 'antd';
 import About from './About';
 import Contact from './Contact';
-import { CalendarOutlined } from '@ant-design/icons';
+import BookingInfo from './BookingInfo';
 
 const Home = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const closeModal = () => setIsModalOpen(false);
-
   return (
     <>
       <Typography.Title>Will Boltz - DPE</Typography.Title>
-
-      <Modal width="75%" open={isModalOpen} onOk={closeModal} onCancel={closeModal}>
-        <BookingPage />
-      </Modal>
 
       <Row gutter={16}>
         <Col span={8}>
@@ -26,16 +16,7 @@ const Home = () => {
         </Col>
 
         <Col span={16}>
-          <Button
-            type="primary"
-            block
-            size="large"
-            shape="round"
-            icon={<CalendarOutlined />}
-            onClick={() => setIsModalOpen(true)}
-          >
-            Book Now
-          </Button>
+          <BookingInfo />
         </Col>
       </Row>
 

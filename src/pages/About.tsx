@@ -5,10 +5,7 @@ const About = () => {
 
   return (
     <Space direction="vertical" align="center">
-      <Image
-        preview={false}
-        src="https://americanflightschools.com/wp-content/uploads/2021/11/thumbnail_IMG-6403-768x1024.jpg"
-      />
+      <Image preview={false} src="./images/profile.jpg" />
 
       <Space direction="horizontal">
         {certificates.map(certificate => (
