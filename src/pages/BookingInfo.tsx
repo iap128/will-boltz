@@ -2,6 +2,7 @@ import { CalendarOutlined } from '@ant-design/icons';
 import { Modal, Button } from 'antd';
 import { useState } from 'react';
 import BookingCalendar from '../components/BookingCalendar';
+import RatesTable from '../components/RatesTable';
 
 const BookingInfo = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,6 +24,8 @@ const BookingInfo = () => {
       >
         Book Now
       </Button>
+
+      <RatesTable />
     </>
   );
 };

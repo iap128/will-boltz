@@ -6,7 +6,9 @@ import BookingInfo from './BookingInfo';
 const Home = () => {
   return (
     <>
-      <Typography.Title>Will Boltz - DPE</Typography.Title>
+      <Typography.Title style={{ textAlign: 'center' }}>Will Boltz - DPE</Typography.Title>
+
+      <Divider />
 
       <Row gutter={16}>
         <Col span={8}>
