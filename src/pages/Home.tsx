@@ -1,13 +1,14 @@
-import { Col, Divider, FloatButton, Row, Typography } from 'antd';
+import { Col, Divider, FloatButton, Row } from 'antd';
 import About from './About';
 import Contact from './Contact';
 import BookingInfo from './BookingInfo';
 import BookingCalendar from '../components/BookingCalendar';
+import HomeBanner from '../components/HomeBanner';
 
 const Home = () => {
   return (
     <>
-      <Typography.Title style={{ textAlign: 'center' }}>Will Boltz - DPE</Typography.Title>
+      <HomeBanner />
 
       <Divider />
 
