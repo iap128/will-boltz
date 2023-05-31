@@ -10,7 +10,7 @@ const Home = () => {
 
       <Divider />
 
-      <Row gutter={16}>
+      <Row gutter={32}>
         <Col span={8}>
           <div id="about">
             <About />

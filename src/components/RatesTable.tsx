@@ -1,4 +1,5 @@
-import { Table } from 'antd';
+import { DollarOutlined } from '@ant-design/icons';
+import { Card, Statistic, Table } from 'antd';
 
 const RatesTable = () => {
   const dataSource = [
@@ -33,7 +34,17 @@ const RatesTable = () => {
   ];
 
   return (
-    <Table dataSource={dataSource} columns={columns} pagination={false} title={() => 'Rates'} />
+    <>
+      <Table dataSource={dataSource} columns={columns} pagination={false} />
+
+      <Card style={{ margin: '15px' }}>
+        <Statistic
+          title="Forms of Payment Accepted"
+          value="Cash or check"
+          prefix={<DollarOutlined />}
+        />
+      </Card>
+    </>
   );
 };
 
