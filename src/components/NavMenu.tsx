@@ -2,17 +2,9 @@ import { Menu, MenuProps, Button } from 'antd';
 import { useState } from 'react';
 
 const NavMenu = () => {
-  const [current, setCurrent] = useState('home');
+  const [current, setCurrent] = useState('about');
 
   const items: MenuProps['items'] = [
-    {
-      label: (
-        <Button type="text" href="#home">
-          Home
-        </Button>
-      ),
-      key: 'home',
-    },
     {
       label: (
         <Button type="text" href="#about">
@@ -20,6 +12,14 @@ const NavMenu = () => {
         </Button>
       ),
       key: 'about',
+    },
+    {
+      label: (
+        <Button type="text" href="#policy">
+          Policy
+        </Button>
+      ),
+      key: 'policy',
     },
     {
       label: (
@@ -35,7 +35,19 @@ const NavMenu = () => {
     setCurrent(e.key);
   };
 
-  return <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />;
+  return (
+    <Menu
+      onClick={onClick}
+      selectedKeys={[current]}
+      mode="horizontal"
+      items={items}
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    />
+  );
 };
 
 export default NavMenu;
