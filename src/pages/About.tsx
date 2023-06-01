@@ -6,7 +6,7 @@ const About = () => {
   return (
     <Card cover={<Image preview={false} src="./images/profile.jpg" />}>
       <Space direction="vertical" align="center">
-        <Space direction="horizontal">
+        <Space direction="horizontal" wrap>
           {certificates.map(certificate => (
             <Tag bordered={false} color="processing">
               {certificate}
