@@ -1,6 +1,11 @@
+import { FC } from 'react';
 import { Helmet } from 'react-helmet';
 
-const BookingCalendar = () => {
+interface Props {
+  visible: boolean;
+}
+
+const BookingCalendar: FC<Props> = ({ visible }) => {
   return (
     <>
       <div
@@ -9,6 +14,8 @@ const BookingCalendar = () => {
         style={{
           minWidth: '320px',
           height: '700px',
+          filter: `blur(${visible ? 0 : 5}px)`,
+          //pointerEvents: !visible ? 'none' : 'all',
         }}
       ></div>
 
