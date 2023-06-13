@@ -1,21 +1,14 @@
-import { FC } from 'react';
 import { Helmet } from 'react-helmet';
 
-interface Props {
-  visible: boolean;
-}
-
-const BookingCalendar: FC<Props> = ({ visible }) => {
+const BookingCalendar= () => {
   return (
     <>
       <div
         className="calendly-inline-widget"
         data-url="https://calendly.com/guitar4me/checkride?hide_gdpr_banner=1"
         style={{
-          minWidth: '320px',
+          width: '100%',
           height: '700px',
-          filter: `blur(${visible ? 0 : 5}px)`,
-          //pointerEvents: !visible ? 'none' : 'all',
         }}
       ></div>
 
