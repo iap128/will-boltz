@@ -1,12 +1,16 @@
 import { CalendarOutlined } from "@ant-design/icons";
-import { Button } from "antd";
+import { Button, Calendar, Modal } from "antd";
 import { useState } from "react";
 import BookingCalendar from "./BookingCalendar";
 
 const BookingOverlay = () => {
-        const [isCalendarActive, setIsCalendarActive] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
+    <>
     <div
       style={{
         width: '100%',
@@ -29,15 +33,23 @@ const BookingOverlay = () => {
           size="large"
           icon={<CalendarOutlined />}
           block
-          onClick={() => setIsCalendarActive(true)}
-          style={{ visibility: isCalendarActive ? 'hidden' : 'visible' }}
+          onClick={openModal}
         >
           Book Now
         </Button>
       </div>
 
-      <BookingCalendar visible={isCalendarActive}/>
+        <div style={{
+          filter: 'blur(2px)',
+          pointerEvents: 'none'
+        }}>
+          <Calendar />
+        </div>
     </div>
+    <Modal open={isModalOpen} onCancel={closeModal} onOk={closeModal} width='75%'>
+      <BookingCalendar />
+    </Modal>
+    </>
   );
 };
 
