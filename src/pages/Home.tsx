@@ -2,8 +2,8 @@ import { Col, Divider, FloatButton, Row } from 'antd';
 import About from './About';
 import Contact from './Contact';
 import BookingInfo from './BookingInfo';
-import BookingCalendar from '../components/BookingCalendar';
 import HomeBanner from '../components/HomeBanner';
+import BookingOverlay from '../components/BookingOverlay';
 
 const Home = () => {
   return (
@@ -20,7 +20,7 @@ const Home = () => {
         </Col>
 
         <Col xs={24} sm={24} md={24} lg={16} xl={16}>
-          <BookingCalendar />
+          <BookingOverlay />
         </Col>
       </Row>
 

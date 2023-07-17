@@ -1,13 +1,13 @@
 import { Helmet } from 'react-helmet';
 
-const BookingCalendar = () => {
+const BookingCalendar= () => {
   return (
     <>
       <div
         className="calendly-inline-widget"
         data-url="https://calendly.com/guitar4me/checkride?hide_gdpr_banner=1"
         style={{
-          minWidth: '320px',
+          width: '100%',
           height: '700px',
         }}
       ></div>
