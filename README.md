@@ -1,4 +1,4 @@
-# (Will Boltz DPE)[https://willboltzdpe.com]
+# [Will Boltz DPE](https://willboltzdpe.com)
 This is a custom website created by Ryan Hunter for the purposes of allowing student pilots to book a checkride with Will Boltz. 
 
 ## Technologies
