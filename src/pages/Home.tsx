@@ -4,6 +4,7 @@ import Contact from './Contact';
 import BookingInfo from './BookingInfo';
 import HomeBanner from '../components/HomeBanner';
 import BookingOverlay from '../components/BookingOverlay';
+import Tips from './Tips';
 
 const Home = () => {
   return (
@@ -23,6 +24,12 @@ const Home = () => {
           <BookingOverlay />
         </Col>
       </Row>
+
+      <Divider />
+
+      <div id="tips">
+        <Tips />
+      </div>
 
       <Divider />
 

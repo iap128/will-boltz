@@ -15,6 +15,14 @@ const NavMenu = () => {
     },
     {
       label: (
+        <Button type="text" href="#tips">
+          Checkride Tips
+        </Button>
+      ),
+      key: 'tips',
+    },
+    {
+      label: (
         <Button type="text" href="#policy">
           Policy
         </Button>
