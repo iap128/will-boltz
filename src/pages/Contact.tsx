@@ -2,7 +2,7 @@ import { MailOutlined, PhoneOutlined } from '@ant-design/icons';
 import { Button, Space, Tooltip, Typography, message } from 'antd';
 
 const Contact = () => {
-  const email = 'gwboltz@gmail.com';
+  const email = 'willboltzdpe@gmail.com';
   const phone = '(303) 638-1712';
 
   const [messageAPI, contextHolder] = message.useMessage();
