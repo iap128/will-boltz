@@ -2,11 +2,15 @@ import { CalendarOutlined } from "@ant-design/icons";
 import { Button, Calendar, Modal } from "antd";
 import { useState } from "react";
 import BookingCalendar from "./BookingCalendar";
+import ReactGA from 'react-ga4';
 
 const BookingOverlay = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
+  const openModal = () => {
+    ReactGA.event({category: 'Booking', action: 'Open Booking Modal'});
+    setIsModalOpen(true);
+  };
   const closeModal = () => setIsModalOpen(false);
 
   return (
