@@ -1,5 +1,6 @@
 import { Menu, MenuProps, Button } from 'antd';
 import { useState } from 'react';
+import ReactGA from 'react-ga4';
 
 const NavMenu = () => {
   const [current, setCurrent] = useState('about');
@@ -40,6 +41,7 @@ const NavMenu = () => {
   ];
 
   const onClick: MenuProps['onClick'] = e => {
+    ReactGA.event('Clicked Nav Menu', {pageName: e.key});
     setCurrent(e.key);
   };
 
