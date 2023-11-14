@@ -6,7 +6,7 @@ const RatesTable = () => {
     {
       key: '1',
       type: 'Checkride',
-      cost: '$800',
+      cost: '$900',
     },
     {
       key: '2',
