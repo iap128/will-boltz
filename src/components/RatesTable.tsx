@@ -6,17 +6,22 @@ const RatesTable = () => {
     {
       key: '1',
       type: 'Checkride',
-      cost: '$900',
+      cost: '$1000',
     },
     {
       key: '2',
       type: 'Recheck (ground & flight)',
-      cost: '$650',
+      cost: '$800',
     },
     {
       key: '3',
       type: 'Recheck (flight only)',
-      cost: '$450',
+      cost: '$500',
+    },
+    {
+      key: '4',
+      type: 'Paper Application',
+      cost: '$300',
     },
   ];
 
@@ -38,18 +43,20 @@ const RatesTable = () => {
       <Table dataSource={dataSource} columns={columns} pagination={false} />
 
       <Card style={{ margin: '15px' }}>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          }}>
-        <Statistic
-          title="Forms of Payment Accepted"
-          value="Cash or Zelle"
-          prefix={<DollarOutlined />}
-        />
-        <Tooltip title='Zelle is a United States–based digital payments network run by a private financial services company owned by the banks Bank of America, Truist, Capital One, JPMorgan Chase, PNC Bank, U.S. Bank, and Wells Fargo.'>
-        <Button icon={<QuestionCircleOutlined />} type='text' />
-        </Tooltip>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <Statistic
+            title="Forms of Payment Accepted"
+            value="Cash or Zelle"
+            prefix={<DollarOutlined />}
+          />
+          <Tooltip title="Zelle is a United States–based digital payments network run by a private financial services company owned by the banks Bank of America, Truist, Capital One, JPMorgan Chase, PNC Bank, U.S. Bank, and Wells Fargo.">
+            <Button icon={<QuestionCircleOutlined />} type="text" />
+          </Tooltip>
         </div>
       </Card>
     </>
